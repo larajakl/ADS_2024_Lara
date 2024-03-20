@@ -25,5 +25,11 @@ A single variable can be referred to many times in a program:
 # print("Hi, " + name + "!")
 # print(name + " is quite a nice name.")
 
+# Lara: Here I tried out something from in the powerpoint of lecture 1 or 2:
+age = int(input("What is your age? "))
 
+if age == 17:
+    print("You are almost an adult.")
+    age = age + 1
+    print("Now you are!")
 

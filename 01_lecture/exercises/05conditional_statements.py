@@ -10,7 +10,17 @@ Example:
     Enter a number: >> 17
     The number 17 is odd.
 """
-# Write your solution here
+#number = int(input("Enter a number: "))
+#is_even = number % 2 == 0
+#is_uneven = number % 2 != 0
+
+#if is_even == True:
+#    print(f"The number {number} is even.")
+#
+#elif is_uneven == True:
+#    print(f"The number {number} is odd.")
+
+
 
 
 """
@@ -26,8 +36,27 @@ Example:
     Enter your exam grade: >> 63
     You passed the exam!
 """
-# Write your solution here
+grade = input("What is your exam grade? ")
 
+#if float(grade) < 50:
+ #   print("Unfortunately, you failed the exam.")
+
+#elif float(grade) >= 60 and float(grade) < 90:
+ #   print("You passed the exam!")
+
+#elif float(grade) >= 90:
+ #  print("You are excellent!")
+
+#or like this (because program goes through all if statements and only goes to elif statement if the if statements don't apply):
+
+#if float(grade) < 50:
+ #   print("Unfortunately, you failed the exam.")
+
+#if float(grade) >= 90:
+  #  print("You are excellent!")
+
+#elif float(grade) >= 60:
+   # print("You passed the exam!")
 
 """
 Write a program that simulates a simple lunch ordering system. 
@@ -48,4 +77,16 @@ Example:
     What kind of dressing would you like: vinaigrette, ranch, or caesar? >> ranch
     Your order: Salad with ranch dressing
 """
-# Write your solution here
+#main_order = str(input("Would you like a sandwich, salad, or wrap? "))
+
+#sandwich = main_order or salad = main_order or wrap = main_order
+
+
+#main_order = main_order1 or main_order2 or main_order3
+
+
+#if main_order = salad:
+  #  print("What kind of dressing would you like: vinaigrette, ranch, or caesar? ")
+
+
+
