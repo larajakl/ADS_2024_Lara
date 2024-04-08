@@ -1,6 +1,5 @@
 print("hello world!")
-print(2 + 2, "\n")
-print(2 + 2)
+
 '''
 Why syntax matters?
 Try to print text without double quotes:
@@ -38,6 +37,8 @@ In addition to the double quotation marks, Python also accepts single quotation 
 This comes in handy if you ever want to print out the actual quotation marks themselves:
 """
 print('"Come right back!", shouted the police officer.')
+# print('"Come right back!", shouted the police officer.')
+# print("\"Hello\nworld!")
 
 """
 It is also possible to combine strings with calculations:
@@ -48,8 +49,19 @@ print("2 + 2 = ", 2 + 2)
 Each print command usually prints out a line of its own, complete with a change of line at the end. 
 However, if the print command is given an additional argument end = "", it will not print a line change.
 """
-print("Hi ", end="")
-print("there!")
+# print("Hi ", end="")
+# print("there!")
+
+# print("""---
+# dfdkdl
+# sdfl
+# """)
+#
+# print(str(2 + 2) + "\n\n")
+#
+# print("----- ")
+
+
 
 
 
