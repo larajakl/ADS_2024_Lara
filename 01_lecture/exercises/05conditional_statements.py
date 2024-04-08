@@ -10,14 +10,14 @@ Example:
     Enter a number: >> 17
     The number 17 is odd.
 """
-#number = int(input("Enter a number: "))
-#is_even = number % 2 == 0
-#is_uneven = number % 2 != 0
-
-#if is_even == True:
+# number = int(input("Enter a number: "))
+# is_even = number % 2 == 0
+# is_uneven = number % 2 != 0
+#
+# if is_even == True:
 #    print(f"The number {number} is even.")
 #
-#elif is_uneven == True:
+# elif is_uneven == True:
 #    print(f"The number {number} is odd.")
 
 
@@ -36,7 +36,7 @@ Example:
     Enter your exam grade: >> 63
     You passed the exam!
 """
-grade = input("What is your exam grade? ")
+# grade = input("What is your exam grade? ")
 
 #if float(grade) < 50:
  #   print("Unfortunately, you failed the exam.")
@@ -77,16 +77,30 @@ Example:
     What kind of dressing would you like: vinaigrette, ranch, or caesar? >> ranch
     Your order: Salad with ranch dressing
 """
-#main_order = str(input("Would you like a sandwich, salad, or wrap? "))
 
-#sandwich = main_order or salad = main_order or wrap = main_order
-
-
-#main_order = main_order1 or main_order2 or main_order3
-
-
-#if main_order = salad:
-  #  print("What kind of dressing would you like: vinaigrette, ranch, or caesar? ")
+# order1 = input("Would you like a sandwich, salad, or wrap? ")  # by using input("Would you like a sandwich, salar, or wrap? ").lower() the user input is converted to lowercase
+#
+# while order1 != "salad" and order1 != "Salad" and order1 != "sandwich" and order1 != "Sandwich" and order1 != "wrap" and order1 != "Wrap":
+#     order1 = input("Sorry, there might be a typo or an invalid answer. Again: Would you like a sandwich, salar, or wrap? ")
+#
+#
+# if order1 == "salad" or order1 == "Salad":
+#     order2 = input("What kind of dressing would you like: vinaigrette, ranch, or caesar? ").lower()
+#     while order2 != "vinaigrette" and order2 != "ranch" and order2 != "caesar":
+#         order2 = input("Invalid input. What kind of dressing would you like: vinaigrette, ranch, or caesar? ").lower()
+#     print(f"Your order: {order1} with {order2} dressing")
+#
+# elif order1 == "sandwich" or order1 == "Sandwich":
+#     order2 = input("What kind (chicken, beef, veggie)? ").lower()
+#     while order2 != "chicken" and order2 != "beef" and order2 != "veggie":
+#         order2 = input("Invalid input. What kind (chicken, beef, veggie)? ").lower()
+#     print(f"Your order: {order1} {order2}")
+#
+# elif order1 == "wrap" or order1 == "Wrap":
+#     order2 = input("Do you want it toasted? ").lower()
+#     while order2 != "yes" and order2 != "no":
+#         order2 = input("Invalid answer. Do you want it toasted? ").lower()
+#     print(f"Your order: {order1} {'toasted' if order2 == 'yes' else 'not toasted'}")
 
 
 

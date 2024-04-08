@@ -80,3 +80,9 @@ print(f"Your age at the end of the year 2024: {2024 - year}")
 # print the sum of 3 numbers using 1 variable
 sum = int(input("First number: ")) + int(input("Second number: ")) + int(input("Third number: "))
 print(sum)
+
+
+# / is division with floating point result
+# // is division with integer result
+# % is modulo which gives rest of the division (9 % 4 = 1)
+# ** is exponentiation (2 ** 3 = 2 * 2 * 2 = 8)

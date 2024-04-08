@@ -78,10 +78,15 @@ Example:
     Enter a number: >> 123
     The reversed number is: >> 321
 """
-#number = int(input("Enter a three-digit number: "))
+# number = int(input("Enter a three-digit number: "))
+#
+# number1 = number % 120
+# number2 = number % 100 // 10 # or number // 10 % 10
+# number3 = number // 100
+#
+# print(f"The reversed number is: {number1}{number2}{number3}")
 
-#number1 = number % 120
-#number2 = number % 100 // 10
-#number3 = number // 100
+# notes
+# print(123 // 100))
+# print(123 % 100 // 10)
 
-#print(f"The reversed number is: {number1}{number2}{number3}")
