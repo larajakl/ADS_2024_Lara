@@ -54,10 +54,10 @@ Try to solve this example in 2 ways:
 #
 # a = -1
 #
-# while a >= (len(string) * -1):
+# while a >= -len(string):
 #     print(string[a])
 #     a -= 1
-
+#
 # string = input("Please type in a string: ")
 #
 # a = len(string) - 1
@@ -65,6 +65,16 @@ Try to solve this example in 2 ways:
 # while a >= 0:
 #     print(string[a])
 #     a -= 1
+
+# solved with for loop:
+
+# string = input("String here: ")
+# for i in range(-1, -len(string) - 1, -1):  # start, stop (not included), step
+#     print(string[i])
+#
+#
+# for i in range(len(string) - 1, - 1, - 1):
+#     print(string[i])
 
 
 """
