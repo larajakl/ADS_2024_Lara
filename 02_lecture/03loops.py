@@ -1,6 +1,17 @@
 """
 WHILE Loop
+
+A while loop in Python is a control flow statement that allows you to repeatedly execute a block of code
+as long as a specified condition is true. It has the following syntax:
+    while condition:
+        # Code block to be executed repeatedly
+        # as long as the condition is true
+
+1. The condition is evaluated before executing the loop body. If the condition is true, the loop body is executed.
+2. After executing the loop body, the condition is evaluated again. If it's still true, the loop body is executed again. This process continues until the condition becomes false.
+3. Once the condition becomes false, the control exits the loop, and the program continues with the code that follows the loop.
 """
+
 i = 1
 while i <= 5:
     print("Hello World!")
@@ -153,6 +164,43 @@ The program the prints the number of attempts.
 #     print("Correct! It only took you one single attempt!")
 # else:
 #     print("Correct! It took you 4 attempts.")
+
+# attempts = 0
+# pin = 1234
+#
+# while True:
+#     number = int(input("PIN:"))
+#     attempts += 1
+#     if number == pin:
+#         break
+#     else:
+#         print("Wrong")
+#
+# if attempts == 1:
+#     print("Correct! It only took you one single attempt!")
+#
+# elif attempts <= 4:
+#     print("Correct! It took you max. 4 attempts.")
+#
+# elif attempts > 4:
+#     print("Correct! But it took you more than 4 attempts.")
+
+# attempts = 0
+# pin = 1234
+#
+# while attempts <= 3:
+#     number = int(input("PIN:"))
+#     attempts += 1
+#     if number == pin:
+#         break
+#     else:
+#         print("Wrong\n")
+#
+# if attempts == 1:
+#     print("Correct! It only took you one single attempt!")
+#
+# elif number != pin:
+#     print("You are out of attempts.")
 
 """
 Concatenating strings with the + operator

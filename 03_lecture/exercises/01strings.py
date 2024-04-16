@@ -1,3 +1,5 @@
+import math
+
 """
 Write a program which asks the user for a string and an amount.
 The program then prints out the string as many times as specified by the amount.
@@ -8,7 +10,10 @@ Example:
     Please type in an amount: >> 4
     heyheyheyhey
 """
-# Write your solution here
+# string = input("Please type in a string: ")
+# amount = int(input("Please type in an amount: "))
+#
+# print(string * amount)
 
 """
 Write a program which asks the user for two strings and then prints out whichever is the longer of the two - 
@@ -26,7 +31,17 @@ Examples:
     world is longer
 """
 
-# Write your solution here
+# string1 = input("Please type in string 1: ")
+# string2 = input("Please type in string 2: ")
+#
+# if len(string1) > len(string2):
+#     print(f"{string1} is longer")
+#
+# elif len(string1) < len(string2):
+#     print(f"{string2} is longer")
+#
+# else:
+#     print("The strings are equally long")
 
 """
 Write a program which asks the user for a string. The program then prints out the input string in reversed order, 
@@ -35,7 +50,22 @@ Try to solve this example in 2 ways:
     * once using positive indeces
     * once using negative indeces
 """
-# Write your solution here
+# string = input("Please type in a string: ")
+#
+# a = -1
+#
+# while a >= (len(string) * -1):
+#     print(string[a])
+#     a -= 1
+
+# string = input("Please type in a string: ")
+#
+# a = len(string) - 1
+#
+# while a >= 0:
+#     print(string[a])
+#     a -= 1
+
 
 """
 Write a program which asks the user for a string. 
@@ -49,7 +79,13 @@ Examples:
     Please type in a string: >> pascal
     The second and the second to last characters are a
 """
-# Write your solution here
+# string = input("Please type in a string: ")
+#
+# if string[1] == string[-2]:
+#     print(f"The second and the second to last characters are {string[1]}")
+#
+# else:
+#     print("The second and the second to last characters are different")
 
 """
 Write a program which prints out a line of hash characters, the width of which is chosen by the user.
@@ -61,7 +97,10 @@ Examples:
     Width: >> 2
     ##
 """
-# Write your solution here
+# width = int(input("Choose width: "))
+#
+# print(width * "#")
+
 
 """
 Modify the previous program so that it also asks for the height, and prints out a rectangle of hash characters accordingly.
@@ -73,7 +112,14 @@ Example:
     ##########
     ##########
 """
-# Write your solution here
+# width = int(input("Choose width: "))
+# height = int(input("Choose height: "))
+#
+# i = 1
+#
+# while i <= height:
+#     print(width * "#")
+#     i += 1
 
 """
 Write a program which asks the user for a string and then prints it out so that exactly 20 characters are displayed. 
@@ -88,29 +134,43 @@ Examples:
     Please type in a string:helloworld
     **********helloworld 
 """
-# Write your solution here
+# string = input("Please type in a string: ")
+#
+# if len(string) >= 20:
+#     print(string[:20])
+#
+# else:
+#     print("*" * (20 - len(string)) + string)
+
+
 
 """
-Please write a program which asks the user for a string and then prints out a frame of * characters with the word in the centre. 
+Please write a program which asks the user for a string and then prints out a frame of * characters with the word in the centre.
 The width of the frame should be 30 characters. You may assume the input string will always fit inside the frame.
 
 If the length of the input string is an odd number, you may print out the word in either of the two possible centre locations.
 
 Examples:
     Word: >> testing
-    
+
     ******************************
     *          testing           *
     ******************************
 
     Word: >> python
-    
+
     ******************************
     *           python           *
     ******************************
 """
-# Write your solution here
+# string = input("Word: ")
+#
+# if len(string) <= 30:
+#     print("*" * 30)
+#     print(f'*{int(math.ceil((30 - len(string) - 2) / 2)) * " "}{string}{int(((30 - len(string) - 2) / 2)) * " "}*')
+#     print("*" * 30)
 
+# math.ceil to round up a number (for example 4.3 becomes 5)
 
 """
 Write a program which asks the user to type in a string. 
@@ -124,7 +184,13 @@ Example:
     tes
     test
 """
-# Write your solution here
+# string = input("Please type in a string: ")
+# print(len(string))
+# a = 0
+# while a <= len(string):
+#     print(string[0:a])
+#     a += 1
+
 
 """
 Write a program which asks the user to type in a string. 
@@ -138,7 +204,12 @@ Example:
     est
     test
 """
-# Write your solution here
+# string = input("Please type in a string: ")
+#
+# a = len(string) - 1
+# while a >= 0:
+#     print(string[a:len(string)])
+#     a -= 1
 
 """
 Write a program which asks the user to input a string. The program then prints out different messages if the string 
@@ -156,8 +227,9 @@ You may assume the input will be in lowercase entirely. Have a look at the examp
     e not found
     o not found
 """
-# Write your solution here
+# string = input("Please type in a string: ")
 
+# xxxxxxxx
 
 """
 Write a program which asks the user to type in a string and a single character. The program then 
@@ -182,7 +254,12 @@ Examples:
     Please type in a word: >> python
     Please type in a character: >> n
 """
-# Write your solution here
+# string = input("Please type in a string: ")
+# single_character = input("Please type in a single character: ")
+#
+# if single_character in string:
+#
+
 
 """
 Write a program which finds the second occurrence of a substring. If there is no second (or first) occurrence, 
