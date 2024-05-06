@@ -97,3 +97,11 @@ describe_pet(pet_name="Rover")  # prints: I have a dog named Rover.
 
 # Overriding default values
 describe_pet(pet_name="Whiskers", animal_type="cat")  # prints: I have a cat named Whiskers.
+
+# for i in range(len(text)):
+# a = 0
+# b = len(text)
+# a += 1
+# b -= 1
+# if text[0] == text[-1]:
+#        return print(x)

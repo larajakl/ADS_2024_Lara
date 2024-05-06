@@ -50,6 +50,8 @@ Try to solve this example in 2 ways:
     * once using positive indeces
     * once using negative indeces
 """
+## using negative indeces:
+#
 # string = input("Please type in a string: ")
 #
 # a = -1
@@ -57,6 +59,9 @@ Try to solve this example in 2 ways:
 # while a >= -len(string):
 #     print(string[a])
 #     a -= 1
+#
+#
+## using positive indeces:
 #
 # string = input("Please type in a string: ")
 #
@@ -66,12 +71,16 @@ Try to solve this example in 2 ways:
 #     print(string[a])
 #     a -= 1
 
-# solved with for loop:
+## solved with for loop:
 
 # string = input("String here: ")
+
+# using negative indeces:
+
 # for i in range(-1, -len(string) - 1, -1):  # start, stop (not included), step
 #     print(string[i])
 #
+# using positive indeces:
 #
 # for i in range(len(string) - 1, - 1, - 1):
 #     print(string[i])
@@ -174,13 +183,26 @@ Examples:
     ******************************
 """
 # string = input("Word: ")
-#
+
 # if len(string) <= 30:
 #     print("*" * 30)
 #     print(f'*{int(math.ceil((30 - len(string) - 2) / 2)) * " "}{string}{int(((30 - len(string) - 2) / 2)) * " "}*')
 #     print("*" * 30)
-
+#
 # math.ceil to round up a number (for example 4.3 becomes 5)
+
+# solved without the math.ceil thing:
+
+# if len(string) <= 30 and len(string) % 2 == 0:
+#     print("*" * 30)
+#     print(f'*{int(((30 - len(string) - 2) / 2)) * " "}{string}{int(((30 - len(string) - 2) / 2)) * " "}*')
+#     print("*" * 30)
+#
+# elif len(string) <= 30 and len(string) % 2 != 0:
+#     print("*" * 30)
+#     print(f'*{int(((30 - len(string) - 2) / 2) + 1) * " "}{string}{int(((30 - len(string) - 2) / 2)) * " "}*')
+#     print("*" * 30)
+
 
 """
 Write a program which asks the user to type in a string. 
@@ -195,9 +217,10 @@ Example:
     test
 """
 # string = input("Please type in a string: ")
+#
 # print(len(string))
 # a = 0
-# while a <= len(string):
+# while a <= len(string): # the right side of the [] is exclusive, that's why we need a <= len() and not a < len()!
 #     print(string[0:a])
 #     a += 1
 
@@ -238,8 +261,24 @@ You may assume the input will be in lowercase entirely. Have a look at the examp
     o not found
 """
 # string = input("Please type in a string: ")
+#
+#
+# if "a" in string:
+#     print("a found")
+# else:
+#     print("a not found")
+#
+# if "e" in string:
+#     print("e found")
+# else:
+#     print("e not found")
+#
+# if "o" in string:
+#     print("o found")
+# else:
+#     print("o not found")
 
-# xxxxxxxx
+
 
 """
 Write a program which asks the user to type in a string and a single character. The program then 
@@ -265,10 +304,12 @@ Examples:
     Please type in a character: >> n
 """
 # string = input("Please type in a string: ")
-# single_character = input("Please type in a single character: ")
+# single_character = input("Please type in a character: ")
 #
 # if single_character in string:
-#
+#     if string.find(single_character) <= (len(string) - 3):
+#         print(string[string.find(single_character):(string.find(single_character) + 3)])
+
 
 
 """
@@ -292,4 +333,18 @@ Examples:
     Please type in a substring: >> ba
     The substring does not occur twice in the string.
 """
-# Write your solution here
+# string = input("Please type in a string: ")
+# substring = input("Please type in a substring: ")
+#
+# first_occurrence = string.find(substring)
+# if first_occurrence == -1:
+#     print("The substring does not occur in the string at all.")
+# else:
+#     second_occurrence = string.find(substring, first_occurrence + len(substring)) # thing behind the comma indicates where searching starts
+#     if second_occurrence == -1:
+#         print("The substring does not occur twice in the string.")
+#     else:
+#         print(f"The second occurrence of the substring is at index {second_occurrence}")
+
+
+

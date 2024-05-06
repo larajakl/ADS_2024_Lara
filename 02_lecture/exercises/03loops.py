@@ -64,15 +64,15 @@ This program should print out a countdown. However, the program doesn't quite wo
 Hint: you can use the debugger of PyCharm to see how the program is executing.
 """
 # Fix the code
-number = 5
-print("Countdown!")
-while True:
-  print(number)
-  number = number - 1
-  if number > 0:
-    break
-
-print("Now!")
+# number = 5
+# print("Countdown!")
+# while True:
+#   print(number)
+#   number = number - 1
+#   if number > 0:
+#     break
+#
+# print("Now!")
 
 # solution:
 # Fix the code
@@ -443,6 +443,34 @@ Example:
   Average: 3.50
   Negative marks: 2
 """
+sum_grades = 0
+amount_grades = 0
+number_negatives = 0
+
+while True:
+    mark = int(input("Mark: "))
+    if mark <= 5 and mark >= 1:
+        amount_grades = amount_grades + 1
+        sum_grades = sum_grades + mark
+        if mark == 5:
+            number_negatives += 1
+    elif mark == 0:
+        break
+    else:
+        print("Invalid mark!")
+
+if sum_grades != 0 and amount_grades != 0:
+    print(f"Average: {sum_grades / amount_grades}")
+
+print(number_negatives)
+
+
+
+
+
+
+
+
 # mark = -1  # because it is outside the valid range of grades (so won't be counted) and ensures that the loop will start
 # grades_sum = 0
 # number_grades_entered = 0

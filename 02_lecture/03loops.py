@@ -12,15 +12,15 @@ as long as a specified condition is true. It has the following syntax:
 3. Once the condition becomes false, the control exits the loop, and the program continues with the code that follows the loop.
 """
 
-i = 1
-while i <= 5:
-    print("Hello World!")
-    i = i + 1
+# i = 1
+# while i <= 5:
+#     print("Hello World!")
+#     i = i + 1
 
-j = 1
-while j < 10:
-    print(j) # print(j, end="")
-    j += 1
+# j = 1
+# while j < 10:
+#     print(j) # print(j, end="")
+#     j += 1
 
 """
 While True - infinite loops
@@ -32,7 +32,7 @@ To stop the loop we need to use the "break" statement, which stops the loop - th
 #     number = int(input("Please type in a number, -1 to quit: "))
 #
 #     if number == -1:
-#         break # if this line is reached the program stops looping and resumes with the "after loop block" print statement
+#         break  # if this line is reached the program stops looping and resumes with the "after loop block" print statement
 #
 #     print(number ** 2)
 #
@@ -53,27 +53,39 @@ Break vs Condition
 """
 
 # 1st version using the break command
-sum = 0
+# sum = 0
+#
+# while True:
+#     number = int(input("Please type in a number, -1 to exit: "))
+#     if number == -1:
+#         break
+#     sum += number
+#
+# print (f"The sum is {sum}")
+#
+# # 2nd version without the break command
+#
+# sum = 0
+# number = 0
+#
+# while number != -1:
+#     number = int(input("Please type in a number, -1 to exit: "))
+#     if number != -1:
+#         sum += number
+#
+# print (f"The sum is {sum}")
 
-while True:
-    number = int(input("Please type in a number, -1 to exit: "))
-    if number == -1:
-        break
-    sum += number
 
-print (f"The sum is {sum}")
+# careful, the following code does not work:
 
-# 2nd version without the break command
-
-sum = 0
-number = 0
-
-while number != -1:
-    number = int(input("Please type in a number, -1 to exit: "))
-    if number != -1:
-        sum += number
-
-print (f"The sum is {sum}")
+# sum = 0
+# number = 0
+#
+# while number != -1:
+#     number = int(input("Please type in a number, -1 to exit: "))
+#     sum += number  # this code does not work because it still adds the "-1" to the sum so the result is wrong!
+#
+# print (f"The sum is {sum}")
 
 """
 Continue vs Break
@@ -87,17 +99,17 @@ continue:
     It is typically used to skip specific iterations or values within a loop.
 """
 
-sum = 0
-
-while True:
-    number = int(input("Please type in a number, -1 to exit: "))
-    if number == -1:
-        break
-    if number >= 10:
-        continue
-    sum += number
-
-print (f"The sum is {sum}")
+# sum = 0
+#
+# while True:
+#     number = int(input("Please type in a number, -1 to exit: "))
+#     if number == -1:
+#         break
+#     if number >= 10:
+#         continue
+#     sum += number
+#
+# print (f"The sum is {sum}")
 
 """
 Nested Loops

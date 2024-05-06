@@ -9,7 +9,10 @@ Define a function called "bark()". When executed, "Woof" should get printed to t
 Execute the function after its definition and run the program!
 """
 
-# Write your solution here
+# def bark():
+#     print("Woof!")
+#
+# bark()
 
 """
 ### Function with 1 Argument, additional logic ###
@@ -29,7 +32,54 @@ Examples:
     ...
 """
 
-# Write your solution here
+# def make_sound(animal : str):
+#     animal = animal.lower()
+#     if animal == "dog":
+#         print("Woof!")
+#     elif animal == "cat":
+#         print("Meow!")
+#     elif animal == "pig":
+#         print("Quieeek!")
+#     else:
+#         print("???")
+# #
+# # with loop in case of wrong input:
+#
+#
+# animal = input("Please enter an animal: ").lower()
+# while animal != "dog" and animal != "cat" and animal != "pig":
+#     make_sound(animal)
+#     animal = input("Please enter an animal: ").lower()
+#
+#
+# make_sound(animal)
+
+# # make_sound("CAT")  # would be hard coded but we don't want this in this example
+#
+# if we wanted to make it run 5 times:
+
+# i = 0
+# while i < 5:
+#     animal_input = input("enter an animal: ").lower()
+#     make_sound(animal_input)
+#     i += 1
+#
+#
+# # make it run 5 times with for range thingy:
+#
+# for i in range(0,5):  # (0 is inclusive, 5 is exclusive) !!
+#     animal_input = input("enter an animal: ").lower()
+#     make_sound(animal_input)
+#     i += 1
+
+
+# we did something else here but I didn't remember the rest:
+# result = make_sound(animal_input)
+# if result == "???":
+#     continue
+# else:
+#     break
+
 
 """
 ### Function with 2 Arguments ###
@@ -50,7 +100,26 @@ Instead of "hard coding", let the user enter the text and the number of times to
 Ask the user repeatedly using a loop.
 """
 
-# Write your solution here
+# def print_many_times(text: str, times: int):
+#       print(f"{text} \n" * times) # or:
+#       # print((text + "\n") * times) # or:
+#       # for i in range(times):
+#       #     print(text)  # or:
+#       # i = 0
+#       # while i < times:
+#       #     print(text)
+#       #     i += 1
+# #
+# # hard coding: (not right solution in this example)
+# print_many_times("Gimme Five!", 5)
+# print_many_times("Gimme Three!", 3)
+
+# let user enter text and number of times and loop used to ask repeatedly:
+# while True:
+#     text = input("Enter a text: ")
+#     times = int(input("Enter a number of times: "))
+#     print_many_times(text, times)
+
 
 """
 ### Return Values ###
@@ -67,10 +136,28 @@ Additional Task:
 Add a type hint to the return value of the function!
 """
 
-def print_greatest(number):
-    print(f"The greatest number is {number}!")
+# def print_greatest(number : float):
+#     print(f"The greatest number is {number}!")
+#
+# def greatest_number(a: int, b: int, c: int) -> int: # if the assessment says use type hints then yes, otherwise not necessary
+#     if a > b and a > c:
+#         return a
+#     elif b > a and b > c:
+#         return b
+#     elif c > a and c > b:
+#         return c
+# #
+# return_value = greatest_number(3, 4, 1)  # (a=3, b=4, c=1) would be the same
+# print_greatest(return_value)
+#
+# # or:
+# print_greatest(greatest_number(3, 4, 1))
 
-# Write your solution here
+
+# Additional task:
+
+# just add "-> int" here
+# def greatest_number(a: int, b: int, c: int) -> int:
 
 """
 ### Type Hints ###
@@ -79,6 +166,7 @@ Refactor your programs from above and add type hints to all function arguments a
 """
 
 # No code here, refactor the programs above!
+# Note to self: not all functions I defined above have arguments or return values!
 
 """
 ### Named arguments ###
@@ -93,7 +181,16 @@ Example Outputs:
     hello world
 """
 
-# Write your solution here
+# def super_print(x : str,y : bool):
+#     if y == False:
+#         print(x)
+#     else:
+#         x = x.upper()
+#         print(x)
+#
+# super_print(x="Bye", y=False)
+#
+# super_print(y=True, x="Hello")
 
 """
 ### Default Values ###
@@ -111,4 +208,28 @@ Example:
     Hello Unknown!
 """
 
-# Write your solution here
+# def greet(name="Unknown"):
+#     print("Hello " + name + "!")
+#
+# name = input("Please enter your name: ")
+# if name == "":
+#     greet()
+#
+# else:
+#     greet(name)
+
+
+
+# tried something out here:
+
+# def greet(name):
+#     if name == "":
+#         print("???")
+#     print("Hello, ", name)
+#     return
+#
+# name = input("Type in a name: ")
+# greet(name)
+
+string = "hi there"
+print(string[2:4])
